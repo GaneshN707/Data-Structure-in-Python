@@ -1,3 +1,4 @@
+
 def binary_search(a, size, key):
     i = 0
     j = size - 1
@@ -16,7 +17,6 @@ def binary_search(a, size, key):
         print(f"{key} found at position {position}.")
     else:
         print("Number not found.")
-
 a = []
 size = int(input("Enter size of the list: "))
 for i in range(size):
@@ -25,3 +25,4 @@ for i in range(size):
 print(a)
 key = int(input("Enter the number to search: "))
 binary_search(a, size, key)
+
