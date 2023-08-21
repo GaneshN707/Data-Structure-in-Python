@@ -1,8 +1,34 @@
-def print_info(a):
-    n = len(a)
-    avg = 0.0
-    for i in range(n):
-        print("Element #%d is %d" % (i,a[i]))
-        avg += a[i]
-    avg /= n
-    print("Average is %f" % avg)
+def enqueue(a):
+    item = int(input("Enter Number To Enqueue: "))
+    a.append(item)
+def dequeue(a):
+    if len(a)==0:
+     print("Queue Underflow: ")
+def peek(a):
+    if len (a) ==0:
+        print("Queue Underflow: ")
+    else:
+        item = a[0]
+        print("peek item= ",item)
+def display(a):
+    if len(a)==0:
+        print("Queue Underflow: ")
+    else:
+        for i in range(0,len,(a)):
+             print(a[i])
+
+
+#__main()__
+a=[]
+while True:
+    choice= int(input("\n1-Enqueue\n2-Dequeue\n3-Peek\n4-Display\n5-Exit\nEnter"))
+    if choice==1:
+        enqueue(a)
+    elif choice==2:
+        dequeue(a)
+    elif choice==3:
+        peek(a)
+    elif choice==4:
+        display(a)
+    else:
+        break
